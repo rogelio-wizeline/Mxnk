@@ -14,6 +14,15 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Mxnk',
       theme: ThemeData(
+        scaffoldBackgroundColor: MxnkColors.white,
+        appBarTheme: AppBarTheme(
+          color: MxnkColors.white,
+          titleTextStyle: TextStyle(color: MxnkColors.mediumTurquoise, fontFamily: 'Comfortaa'),
+          centerTitle: false,
+          elevation: 0,
+          iconTheme: IconThemeData(color: MxnkColors.mediumTurquoise, size: 15),
+          titleSpacing: -30,
+        ),
         textTheme: Theme.of(context).textTheme.apply(
               fontFamily: 'Comfortaa',
               bodyColor: MxnkColors.jet,
