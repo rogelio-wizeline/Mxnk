@@ -1,6 +1,7 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
+import 'package:mxnk_app/ui/screens/routine_screen.dart';
 
 class MyRoutinesScreen extends StatefulWidget {
   const MyRoutinesScreen({Key? key}) : super(key: key);
@@ -77,15 +78,13 @@ class _MyRoutinesScreenState extends State<MyRoutinesScreen> {
         return Column(
           children: [
             TextButton(
-                onPressed: () {},
-                // TODO: build RoutineScreen
-                // onPressed: () {
-                //   Navigator.of(context).push(
-                //     MaterialPageRoute(
-                //       builder: (BuildContext context) => RoutineScreen()
-                //     ),
-                //   );
-                // },
+                onPressed: () {
+                  Navigator.of(context).push(
+                    MaterialPageRoute(
+                      builder: (BuildContext context) => RoutineScreen()
+                    ),
+                  );
+                },
                 child: Text(
                   routine["name"] ?? '',
                   style: TextStyle(fontSize: 20, fontWeight: FontWeight.w400),
