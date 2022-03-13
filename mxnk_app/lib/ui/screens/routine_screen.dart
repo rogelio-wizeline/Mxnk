@@ -1,6 +1,7 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
+import 'package:mxnk_app/ui/screens/exercise_screen.dart';
 import 'package:mxnk_app/ui/util/constants.dart';
 
 class RoutineScreen extends StatefulWidget {
@@ -56,7 +57,7 @@ class _RoutineScreenState extends State<RoutineScreen> {
                   style: TextStyle(fontWeight: FontWeight.w700, fontSize: 36),
                 ),
                 SizedBox(height: 100),
-                _my_exercises_list(),
+                _exercisesList(),
               ],
             ),
           ),
@@ -85,22 +86,20 @@ class _RoutineScreenState extends State<RoutineScreen> {
         floatingActionButtonLocation: FloatingActionButtonLocation.endFloat);
   }
 
-  Widget _my_exercises_list() {
+  Widget _exercisesList() {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: _exercises.map((Map<String, String> exercise) {
         return Column(
           children: [
             TextButton(
-                onPressed: () {},
-                // TODO: build RoutineScreen
-                // onPressed: () {
-                //   Navigator.of(context).push(
-                //     MaterialPageRoute(
-                //       builder: (BuildContext context) => ExerciseScreen()
-                //     ),
-                //   );
-                // },
+                onPressed: () {
+                  Navigator.of(context).push(
+                    MaterialPageRoute(
+                      builder: (BuildContext context) => ExerciseScreen()
+                    ),
+                  );
+                },
                 child: Text(
                   exercise["name"] ?? '',
                   style: TextStyle(fontSize: 20, fontWeight: FontWeight.w400),
