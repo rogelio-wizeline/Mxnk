@@ -108,25 +108,24 @@ class _seriescreenState extends State<ExerciseScreen> {
         return Column(
           children: [
             TextButton(
-                onPressed: () {},
-                // onPressed: () {
-                // TODO: bottomSheet selectors for editing
-                // },
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Text(
-                      "${serie["weight"]} ${serie["unit"]}",
-                      style:
-                          TextStyle(fontSize: 20, fontWeight: FontWeight.w400),
-                    ),
-                    Text(
-                      serie["reps"] ?? '',
-                      style:
-                          TextStyle(fontSize: 20, fontWeight: FontWeight.w400),
-                    ),
-                  ],
-                )),
+              onPressed: () {},
+              // onLongPress: () {
+              // TODO: bottomSheet selectors for editing
+              // },
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text(
+                    "${serie["weight"]} ${serie["unit"]}",
+                    style: TextStyle(fontSize: 20, fontWeight: FontWeight.w400),
+                  ),
+                  Text(
+                    serie["reps"] ?? '',
+                    style: TextStyle(fontSize: 20, fontWeight: FontWeight.w400),
+                  ),
+                ],
+              ),
+            ),
             SizedBox(height: 15),
           ],
         );
